@@ -161,7 +161,7 @@
     }
 
     .quote {
-      margin: 0 0 10px;
+      margin: 0;
       padding: 48px 0;
       background: var(--um);
       color: #fff;
@@ -177,13 +177,20 @@
       letter-spacing: -0.03em;
     }
 
-    .quote .who {
-      margin-top: 18px;
-      font-family: var(--font);
-      font-size: 18px;
+    .walk {
+      background: var(--soft);
+      color: var(--ink);
+    }
+
+    .walk-inner {
+      padding: 36px 0 40px;
+    }
+
+    .walk p {
+      margin: 0;
+      max-width: 34em;
+      font-size: clamp(22px, 2.6vw, 28px);
       line-height: 1.4;
-      letter-spacing: 0;
-      color: #ffffff;
     }
 
     .steps {
@@ -283,14 +290,18 @@
   </header>
   <div class="banner">
     <div class="wrap banner-inner">
-      <p>Помни: мы — компания для многих</p>
+      <p>Помни: мы — компания для клиентов</p>
     </div>
   </div>
 
-  <section class="quote" aria-label="Как мы это говорим">
+  <section class="quote" aria-label="Мы рядом">
     <div class="wrap">
       <p>Мы рядом до самой машины.</p>
-      <p class="who">Покупку берём с разрешения клиента и идём вместе с ним. Говорим сами: «Давайте помогу до машины».</p>
+    </div>
+  </section>
+  <section class="walk" aria-label="Как идём">
+    <div class="wrap walk-inner">
+      <p>Говорим сами: «Давайте помогу до машины». Покупку берём с разрешения клиента и идём вместе с ним.</p>
     </div>
   </section>
 
