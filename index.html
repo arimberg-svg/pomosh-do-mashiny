@@ -160,37 +160,46 @@
       letter-spacing: -0.02em;
     }
 
-    .quote {
-      margin: 0;
-      padding: 48px 0;
-      background: var(--um);
-      color: #fff;
+    .frames {
+      display: grid;
+      gap: 16px;
+      margin: 28px 0 8px;
     }
 
-    .quote .wrap { width: min(760px, calc(100% - 40px)); }
-
-    .quote p {
-      margin: 0;
-      font-family: var(--head);
-      font-size: clamp(26px, 4vw, 40px);
-      line-height: 1.2;
-      letter-spacing: -0.03em;
+    .frame {
+      background: #fff;
+      border: 1px solid var(--line);
     }
 
-    .walk {
+    .frame-art {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 210px;
       background: var(--soft);
-      color: var(--ink);
+      padding: 12px 16px;
     }
 
-    .walk-inner {
-      padding: 36px 0 40px;
+    .frame-art svg {
+      width: min(100%, 440px);
+      height: auto;
+      display: block;
     }
 
-    .walk p {
-      margin: 0;
-      max-width: 34em;
-      font-size: clamp(22px, 2.6vw, 28px);
-      line-height: 1.4;
+    .frame-body { padding: 18px 22px 6px; }
+
+    .frame-body .n {
+      display: block;
+      margin-bottom: 6px;
+      font-family: var(--head);
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      color: var(--um);
+    }
+
+    .frame h2 {
+      margin: 0 0 8px;
+      font-size: 26px;
     }
 
     .steps {
@@ -269,6 +278,13 @@
     @media (min-width: 760px) {
       .reasons { grid-template-columns: 1fr 1fr 1fr; }
       .reason { min-height: 100%; }
+      .frame {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        align-items: stretch;
+      }
+      .frame-art { min-height: 230px; }
+      .frame-body { padding: 28px 28px 12px; }
     }
 
     @media (max-width: 640px) {
@@ -294,91 +310,114 @@
     </div>
   </div>
 
-  <section class="quote" aria-label="Мы рядом">
-    <div class="wrap">
-      <p>Мы рядом до самой машины.</p>
-    </div>
-  </section>
-  <section class="walk" aria-label="Как идём">
-    <div class="wrap walk-inner">
-      <p>Говорим сами: «Давайте помогу до машины». Покупку берём с разрешения клиента и идём вместе с ним.</p>
-    </div>
-  </section>
-
   <main>
     <div class="wrap hero">
       <p class="kicker">Ребята, это наш сервис</p>
       <h1>Наш сервис шире, чем наши двери: провожаем до машины</h1>
-      <p class="lead">Самое важное ещё впереди: помочь клиенту донести товар до машины целым и так, чтобы ему самому было удобно. Ничего не мнём, не роняем и не заставляем человека тащить тяжесть одному.</p>
-      <div class="scene">
-        <p>Наша цель — сделать клиента постоянным. Мы работаем для людей. Сделайте так, чтобы человек почувствовал себя дорогим гостем, вспомнил этот сервис и захотел вернуться.</p>
+      <p class="lead">Пять шагов. Говорим сами, берём покупку с разрешения и доносим её целой, так, чтобы клиенту было удобно.</p>
+
+      <div class="frames">
+        <article class="frame">
+          <div class="frame-art" aria-hidden="true">
+            <svg viewBox="0 0 320 180" fill="none" stroke="#4208A8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="74" cy="78" r="16"/>
+              <path d="M74 96v34M58 116h32M62 164l12-34 12 34"/>
+              <path d="M118 42h132a14 14 0 0 1 14 14v30a14 14 0 0 1-14 14H150l-18 16v-16h-14a14 14 0 0 1-14-14V56a14 14 0 0 1 14-14Z"/>
+              <path d="M156 68h48l12 16h-70l10-16Z"/>
+              <circle cx="168" cy="90" r="5"/>
+              <circle cx="204" cy="90" r="5"/>
+              <rect x="214" y="118" width="52" height="38" rx="3"/>
+              <path d="M224 118v-10h32v10"/>
+            </svg>
+          </div>
+          <div class="frame-body">
+            <span class="n">01</span>
+            <h2>Говорим сами</h2>
+            <p>«Давайте помогу до машины». На кассе, если очередь, короче: «Спасибо. Помочь до машины?» Клиент не должен просить.</p>
+          </div>
+        </article>
+
+        <article class="frame">
+          <div class="frame-art" aria-hidden="true">
+            <svg viewBox="0 0 320 180" fill="none" stroke="#4208A8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="62" cy="64" r="14"/>
+              <path d="M62 80v32M48 100h28M52 154l10-42 10 42"/>
+              <rect x="128" y="96" width="64" height="44" rx="3"/>
+              <path d="M128 112h64"/>
+              <circle cx="258" cy="64" r="14"/>
+              <path d="M258 80v32M244 100h28M248 154l10-42 10 42"/>
+              <path d="M108 108h16M196 108h16"/>
+              <path d="M36 36h232"/>
+              <path d="M256 26l14 10-14 10"/>
+            </svg>
+          </div>
+          <div class="frame-body">
+            <span class="n">02</span>
+            <h2>Берём с разрешения</h2>
+            <p>Покупку берём с разрешения клиента и идём вместе с ним. Сами выйти не можете — зовите того, кто может. «Я занят» без замены не говорим.</p>
+          </div>
+        </article>
+
+        <article class="frame">
+          <div class="frame-art" aria-hidden="true">
+            <svg viewBox="0 0 320 180" fill="none" stroke="#4208A8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M108 52l16 16 28-32"/>
+              <rect x="108" y="78" width="104" height="68" rx="4"/>
+              <path d="M108 100h104"/>
+              <path d="M78 112h30M242 112h-30"/>
+              <path d="M70 112c-10 18-6 34 12 34M250 112c10 18 6 34-12 34"/>
+            </svg>
+          </div>
+          <div class="frame-body">
+            <span class="n">03</span>
+            <h2>Несём бережно</h2>
+            <p>Товар доезжает целым, клиенту удобно. Ничего не мнём, не роняем и не оставляем тяжесть ему одному. Генератор, станок, мешок, длинная упаковка.</p>
+          </div>
+        </article>
+
+        <article class="frame">
+          <div class="frame-art" aria-hidden="true">
+            <svg viewBox="0 0 320 180" fill="none" stroke="#4208A8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="86" cy="78" r="14"/>
+              <path d="M86 94v30M72 112h28M76 160l10-36 10 36"/>
+              <circle cx="214" cy="78" r="14"/>
+              <path d="M214 94v30M200 112h28M204 160l10-36 10 36"/>
+              <path d="M112 52c14-16 62-16 76 0"/>
+              <path d="M124 36c10-12 42-12 52 0"/>
+              <rect x="146" y="118" width="28" height="22" rx="2"/>
+              <path d="M154 118v-8h12v8"/>
+            </svg>
+          </div>
+          <div class="frame-body">
+            <span class="n">04</span>
+            <h2>Разговор по дороге</h2>
+            <p>По пути клиент спокоен и благодарен. Проявите интерес, напомните про сопутствующее или расскажите о позициях под заказ.</p>
+          </div>
+        </article>
+
+        <article class="frame">
+          <div class="frame-art" aria-hidden="true">
+            <svg viewBox="0 0 320 180" fill="none" stroke="#4208A8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 118h132l16-26h40l14 26h18v26H18v-26Z"/>
+              <circle cx="62" cy="144" r="12"/>
+              <circle cx="168" cy="144" r="12"/>
+              <rect x="30" y="92" width="26" height="22" rx="2"/>
+              <rect x="248" y="46" width="52" height="116"/>
+              <circle cx="274" cy="78" r="8"/>
+              <path d="M274 88v24M266 100h16M268 136l6-24 6 24"/>
+              <circle cx="290" cy="108" r="2" fill="#4208A8" stroke="none"/>
+            </svg>
+          </div>
+          <div class="frame-body">
+            <span class="n">05</span>
+            <h2>До машины и обратно</h2>
+            <p>Кладём покупку в машину и прощаемся так, чтобы захотелось вернуться. Касса и вход не остаются пустыми. Этот путь клиент расскажет знакомым и коллегам.</p>
+          </div>
+        </article>
       </div>
     </div>
 
     <div class="wrap">
-      <section>
-        <h2>Дорога до машины решает, вернётся ли он</h2>
-        <p>Генератор, станок, мешок, длинная упаковка. Человек уже заплатил, а вещи ещё нужно донести. То, как красиво продавали у полки, сотрётся из памяти. Но этот путь, где его вещи несли рядом, он запомнит — и расскажет знакомым и коллегам.</p>
-        <p>Помощь до машины у нас стоит рядом с доставкой и погрузкой. Это строка сервиса, её отрабатывают на стажировке вместе с допродажами. Так мы и отличаемся: заботимся до конца, а не до кассы.</p>
-        <h2>Идеальный момент для разговора</h2>
-        <p>Путь до машины — время, когда клиент спокоен и благодарен. Используйте эти минуты: проявите искренний интерес, напомните про сопутствующие товары или расскажите о позициях под заказ.</p>
-        <p>Довольный клиент возвращается туда, где о нём позаботились. Помогая донести покупку до машины, вы создаёте сервис, который превосходит ожидания.</p>
-      </section>
-    </div>
-
-    <div class="wrap">
-      <section>
-        <h2>Что человек должен почувствовать</h2>
-        <div class="reasons">
-          <article class="reason">
-            <span class="n">01</span>
-            <h3>Чек ещё не финал</h3>
-            <p>Оплата уже прошла, а товар всё ещё у клиента в руках. Покупка заканчивается тогда, когда вещи лежат в машине и человек уезжает спокойно.</p>
-          </article>
-          <article class="reason">
-            <span class="n">02</span>
-            <h3>Он дорогой гость</h3>
-            <p>Мы берём тяжёлое сами и идём с ним до самой машины. Человек чувствует заботу, а не то, что его отпустили с мешком у двери.</p>
-          </article>
-          <article class="reason">
-            <span class="n">03</span>
-            <h3>Он вернётся к нам</h3>
-            <p>Именно эта забота в самом конце и приводит человека снова. Он вспомнит, как его проводили до машины, и захочет вернуться.</p>
-          </article>
-        </div>
-      </section>
-
-      <section>
-        <h2>Как это сказать и донести</h2>
-        <div class="say">
-          <strong>В зале</strong>
-          <p>«Давайте помогу до машины».</p>
-        </div>
-        <div class="say">
-          <strong>На кассе</strong>
-          <p>Чек отдали и сказали: «Спасибо, хорошего дня». Покупка тяжёлая — здесь же предлагаем помощь. Гость не должен просить.</p>
-          <p>Очередь фразу не отменяет. Она только делает её короче: «Спасибо. Помочь до машины?»</p>
-        </div>
-
-        <ol class="steps">
-          <li>
-            <span class="num">1</span>
-            <span>Смотрим на покупку. Генератор, станок, мешок, длинная упаковка. Сами предлагаем донести, спокойно, как дорогому гостю.</span>
-          </li>
-          <li>
-            <span class="num">2</span>
-            <span>Сами выйти не можете — зовите того, кто может. Вещи гостя всё равно доносят до машины. «Я занят» без замены ему не говорим.</span>
-          </li>
-          <li>
-            <span class="num">3</span>
-            <span>Кассу и вход не оставляем пустыми. Один человек идёт до машины, в магазине остаются люди: и на кассе, и у двери.</span>
-          </li>
-          <li>
-            <span class="num">4</span>
-            <span>Положили в машину, попрощались так, чтобы захотелось вернуться, и сразу обратно в зал.</span>
-          </li>
-        </ol>
-      </section>
 
       <section class="from">
         <h2>Откуда это в наших инструкциях</h2>
